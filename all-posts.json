@@ -1,21 +1,10 @@
+---
+layout: null
+---
 {
   "posts" : [
-    
-    "./AI-and-intellectual-property.html",
-    
-    "./back-to-basics.html",
-    
-    "./starting-the-adventure.html",
-    
-    "./deep-q-learning-tic-tac-toe.html",
-    
-    "./neural-network-optimization-methods.html",
-    
-    "./ML-Library-from-scratch.html",
-    
-    "./conways-game-of-life.html",
-    
-    "./single-neuron-perceptron.html"
-    
+    {% for post in site.posts %}
+    ".{{ post.url }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
   ]
 }
